@@ -50,3 +50,52 @@ The successful hostname verification confirmed that the Master VM was communicat
 <img width="751" height="834" alt="image" src="https://github.com/user-attachments/assets/a51e1545-fe7f-48c3-a022-9a5245afca88" />
 
 <img width="785" height="703" alt="image" src="https://github.com/user-attachments/assets/c46e5eae-7fec-4b02-b8b6-3b6719262bad" />
+
+## 5. MPI Compilation
+
+The MPI matrix multiplication program was compiled using `mpicc`.
+
+```bash
+mpicc -O2 matrix_mpi.c -o matrix_mpi
+```
+
+The executable was copied to Worker1, Worker2, and Worker3 using scp.
+
+```bash
+scp matrix_mpi worker1:~/matrix_mpi
+scp matrix_mpi worker2:~/matrix_mpi
+scp matrix_mpi worker3:~/matrix_mpi
+```
+
+The MPI program was then executed using four processes:
+
+```bash
+mpirun -np 4 --hostfile hosts sh -c '$HOME/matrix_mpi'
+```
+
+## 6. MPI Process Execution and Communication
+
+The MPI program successfully launched four processes across the Master and Worker VMs.
+
+The MPI ranks communicated successfully during execution, confirming that the distributed MPI setup was working correctly.
+
+MPI Execution Output:
+
+<img width="762" height="294" alt="image" src="https://github.com/user-attachments/assets/0eae7a4f-9628-4d64-9fc1-2a36bd4b9a6d" />
+
+## 7. MPI Working
+
+The matrix multiplication workload was distributed among the four MPI processes.
+
+The Master process coordinated the execution, while the Worker processes performed their assigned computation.
+
+## 8. MPI Result
+
+The MPI matrix multiplication completed successfully in 92.979510 seconds.
+
+The verification value C[0][0] = 4000.00 confirmed the correctness of the result.
+
+The MPI implementation achieved a 2.63× speedup with 65.8% parallel efficiency.
+
+---
+
