@@ -81,7 +81,7 @@ The MPI ranks communicated successfully during execution, confirming that the di
 
 MPI Execution Output:
 
-<img width="762" height="294" alt="image" src="https://github.com/user-attachments/assets/0eae7a4f-9628-4d64-9fc1-2a36bd4b9a6d" />
+<img width="867" height="166" alt="MPI_Execution" src="https://github.com/user-attachments/assets/fe642cb6-7842-4dce-9463-9a6a3f94881c" />
 
 ## 7. MPI Working
 
