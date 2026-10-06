@@ -1,4 +1,4 @@
-# MPI Matrix Multiplication
+# PART C - MPI Distributed Cluster & Matrix Multiplication
 
 ## 1. MPI Cluster Setup
 
