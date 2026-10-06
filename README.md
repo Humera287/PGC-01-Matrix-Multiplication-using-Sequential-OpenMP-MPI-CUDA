@@ -744,7 +744,7 @@ Parallel-and-GPU-Computing/
 
 This experiment compared sequential, MPI, OpenMP, and CUDA implementations of dense matrix multiplication using 4000 × 4000 matrices.
 
-The sequential implementation required 244.120000 seconds and was used as the baseline.
+The sequential implementation required 247.290475 seconds and was used as the baseline.
 
 The MPI implementation reduced the execution time to 92.979510 seconds, achieving a 2.63× speedup.
 
